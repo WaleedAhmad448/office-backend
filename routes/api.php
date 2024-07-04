@@ -14,8 +14,6 @@ Route::prefix('person')->group(function () {
     Route::put('/{id}',[ PersonController::class, 'update']);
 });
 
-Route::get('person/photo/{filename}', 'PersonController@getPersonPhoto');
-
 Route::get('/employees',[App\Http\Controllers\EmployeeController::class, 'index']);
 
 Route::post('/save',[App\Http\Controllers\EmployeeController::class, 'store']);
